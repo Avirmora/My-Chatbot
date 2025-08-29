@@ -5,19 +5,8 @@ from langchain.embeddings.openai import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from langchain.chains.question_answering import load_qa_chain
 from langchain_community.chat_models import ChatOpenAI
-import os
-from dotenv import load_dotenv
 
-# Load environment variables from .env file (if present)
-load_dotenv()
-
-# Get OpenAI API key from environment
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
-#OPENAI_API_KEY = "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"
-
-if not OPENAI_API_KEY:
-    st.error("⚠️ OpenAI API key not found! Please set OPENAI_API_KEY in environment or .env file.")
-    st.stop()
+OPENAI_API_KEY = "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"
 
 #upload pdf file
 st.header("MY First Chatbot")
